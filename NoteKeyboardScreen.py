@@ -26,11 +26,11 @@ class NoteKeyboardScreen(tk.Frame):
         self.set_background("Photos/FondoMusicApp.jpg")
         
         instruction_label = tk.Label(self, text="Instruments: ", font=("Helvetica", 15), fg="white", bg="black")
-        instruction_label.place(x=220, y=50, anchor='center')
+        instruction_label.place(x=200, y=50, anchor='center')
 
-        self.instrument_combobox = ttk.Combobox(self, values=list(instruments.keys()), state="readonly")
+        self.instrument_combobox = ttk.Combobox(self, values=list(instruments.keys()), state="readonly", font=("Helvetica", 15, "bold"))
         self.instrument_combobox.bind("<<ComboboxSelected>>", self.change_instrument)
-        self.instrument_combobox.place(x=350, y=50, anchor='center')
+        self.instrument_combobox.place(x=370, y=50, anchor='center')
       
         instruction_label = tk.Label(self, text="Select an instrument and play notes using the keyboard", font=("Helvetica", 15, "bold"), fg="purple", bg="black")
         instruction_label.place(x=330, y=100, anchor='center')
@@ -63,30 +63,30 @@ class NoteKeyboardScreen(tk.Frame):
             self.display_waveform(sound_path)
     
     def display_waveform(self, sound_path):
-        # Convertir el archivo MP3 a WAV usando pydub
+    
         audio = AudioSegment.from_mp3(sound_path)
-        audio = audio.set_channels(1)  # Convertir a mono
-        audio = audio.set_frame_rate(44100)  # Establecer la frecuencia de muestreo
+        audio = audio.set_channels(1) 
+        audio = audio.set_frame_rate(44100)  
         
-        # Convertir a formato WAV en memoria
+     
         wav_data = audio.export(format="wav")
         
-        # Leer los datos WAV usando wave
+     
         wav_data.seek(0)
         wf = wave.open(wav_data, 'rb')
         frames = wf.readframes(-1)
         sound_info = np.frombuffer(frames, dtype=np.int16)
         wf.close()
         plt.close()
-        # Crear la figura y el eje
+      
         fig, ax = plt.subplots(figsize=(7, 4))
         ax.plot(sound_info)
         ax.set_title("Waveform")
-        # Configurar la línea de la onda
-        line, = ax.plot([], [], color='cyan')  # Color de la onda
+      
+        line, = ax.plot([], [], color='cyan') 
 
-        # Configurar el color de la parte blanca del gráfico (área de dibujo)
-        fig.patch.set_facecolor('#602A91')  # Fondo de la figura
+       
+        fig.patch.set_facecolor('#602A91') 
         ax.patch.set_facecolor('purple') 
         ax.xaxis.label.set_color('white') 
         ax.yaxis.label.set_color('white')
@@ -97,17 +97,14 @@ class NoteKeyboardScreen(tk.Frame):
         ax.spines['left'].set_color('white')  
         ax.spines['right'].set_color('white') 
 
-        # Configurar el título
-        ax.set_title("Waveform", color='white')  # Color del título
-
-        # Actualizar los datos de la línea
+       
+        ax.set_title("Waveform", color='white') 
+     
         line.set_data(np.arange(len(sound_info)), sound_info)
         
-        # Limpiar el frame anterior si existe
         for widget in self.graph_frame.winfo_children():
             widget.destroy()
         
-        # Crear el canvas para matplotlib
         canvas = FigureCanvasTkAgg(fig, master=self.graph_frame)
         canvas.draw()
         canvas.get_tk_widget().pack(fill=tk.BOTH, expand=True)
