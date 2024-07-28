@@ -1,3 +1,5 @@
+Rubén Frias González Grupo-22
+
 Este es un reproductor de música mp3 con un área para jugar con el teclado reproduciendo notas musicales de tres escalas diferentes con un piano y un chelo disponibles. Usted perdona la interfaz de palito profe LOL pero no hubo mucho más que pudiera hacer con tkinter.
 
 El proyecto incluye varias librerías entre ellas tkinter, matplotlib, numpy, os, pygame, pydub, wave. Estas fueron utilizadas, entre otros propósitos, para la interfaz del proyecto, graficar la onda de sonido de una nota musical, acceder a directorios dentro del proyecto con solo poner su dirección, reproducir sonidos y modificar algunas pistas de audio.
