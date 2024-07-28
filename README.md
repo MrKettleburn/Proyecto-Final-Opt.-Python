@@ -22,3 +22,9 @@ A continuación se muestran las pantallas de la aplicación:
 
 Pantalla principal:
 ![Screenshot_20240728_031240](https://github.com/user-attachments/assets/46993b8a-b240-48a8-b701-5e6fa573e727)
+
+Pantalla reproductor:
+![Screenshot_20240728_040108](https://github.com/user-attachments/assets/d25e92e1-795a-4b5e-b5f1-1b158bef107f)
+
+Pantalla notas musicales:
+![Screenshot_20240728_040348](https://github.com/user-attachments/assets/c2d50d08-b0ff-4ffa-9872-d34bbeaeb459)
