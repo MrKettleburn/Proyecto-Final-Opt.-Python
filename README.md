@@ -17,3 +17,6 @@ Octavas: Esta clase no participa activamente durante la ejecución dle programa.
 PlayScreen: Es la clase que represneta la pantalla donde se reproduce la música. Está vinculada a la carpeta music del proyecto, donde están las pistas a reproducir pero que el usuario puede ampliar a través del botón + encima de la lista de reproducción.
 
 Sounds: Aquí están los diccionarios de sonidos de las notas musicales divididos por instrumentos.
+
+A continuación se muestran las pantallas de la aplicación:
+
