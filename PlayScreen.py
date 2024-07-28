@@ -29,7 +29,7 @@ class PlayScreen(tk.Frame):
         
         self.create_button("Photos/Add.jpg", self.select_song, 120, 0, 50, 50)
 
-        self.create_button("Photos/Add.jpg", self.app.show_main_screen, 0, 0, 50, 50)
+        self.create_button("Photos/Back.jpg", self.app.show_main_screen, 0, 0, 50, 50)
 
         label_image = Image.open("Photos/MusicNote.jpg")
         label_image = label_image.resize((400, 400), Image.LANCZOS)

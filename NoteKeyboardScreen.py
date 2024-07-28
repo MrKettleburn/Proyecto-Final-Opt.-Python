@@ -42,7 +42,7 @@ class NoteKeyboardScreen(tk.Frame):
         self.graph_frame = tk.Frame(self, bg="black")
         self.graph_frame.place(x=2, y=150, width=700, height=300)
 
-        button_image = Image.open("Photos/Add.jpg")
+        button_image = Image.open("Photos/Back.jpg")
         button_image = button_image.resize((50, 50), Image.LANCZOS)
         button_photo = ImageTk.PhotoImage(button_image)
         
