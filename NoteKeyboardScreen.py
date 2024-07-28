@@ -112,7 +112,7 @@ class NoteKeyboardScreen(tk.Frame):
 
         #NOTAS NORMAL
         
-        label_image = Image.open("Photos/DO_high.jpg")
+        label_image = Image.open("Photos/DO.jpg")
         label_image = label_image.resize((65, 65), Image.LANCZOS)
         label_photo = ImageTk.PhotoImage(label_image)
         
@@ -120,7 +120,7 @@ class NoteKeyboardScreen(tk.Frame):
         button_label.image = label_photo  
         button_label.place(x=50, y=555)
 
-        label_image = Image.open("Photos/RE_high.jpg")
+        label_image = Image.open("Photos/RE.jpg")
         label_image = label_image.resize((65, 65), Image.LANCZOS)
         label_photo = ImageTk.PhotoImage(label_image)
         
@@ -128,7 +128,7 @@ class NoteKeyboardScreen(tk.Frame):
         button_label.image = label_photo  
         button_label.place(x=125, y=555)
 
-        label_image = Image.open("Photos/MI_high.jpg")
+        label_image = Image.open("Photos/MI.jpg")
         label_image = label_image.resize((65, 65), Image.LANCZOS)
         label_photo = ImageTk.PhotoImage(label_image)
         
@@ -136,7 +136,7 @@ class NoteKeyboardScreen(tk.Frame):
         button_label.image = label_photo  
         button_label.place(x=200, y=555)
 
-        label_image = Image.open("Photos/FA_high.jpg")
+        label_image = Image.open("Photos/FA.jpg")
         label_image = label_image.resize((65, 65), Image.LANCZOS)
         label_photo = ImageTk.PhotoImage(label_image)
         
@@ -144,7 +144,7 @@ class NoteKeyboardScreen(tk.Frame):
         button_label.image = label_photo  
         button_label.place(x=275, y=555)
 
-        label_image = Image.open("Photos/SOL_high.jpg")
+        label_image = Image.open("Photos/SOL.jpg")
         label_image = label_image.resize((65, 65), Image.LANCZOS)
         label_photo = ImageTk.PhotoImage(label_image)
         
@@ -152,7 +152,7 @@ class NoteKeyboardScreen(tk.Frame):
         button_label.image = label_photo  
         button_label.place(x=350, y=555)
 
-        label_image = Image.open("Photos/LA_high.jpg")
+        label_image = Image.open("Photos/LA.jpg")
         label_image = label_image.resize((65, 65), Image.LANCZOS)
         label_photo = ImageTk.PhotoImage(label_image)
         
@@ -160,7 +160,7 @@ class NoteKeyboardScreen(tk.Frame):
         button_label.image = label_photo  
         button_label.place(x=425, y=555)
 
-        label_image = Image.open("Photos/SI_high.jpg")
+        label_image = Image.open("Photos/SI.jpg")
         label_image = label_image.resize((65, 65), Image.LANCZOS)
         label_photo = ImageTk.PhotoImage(label_image)
         
@@ -170,7 +170,7 @@ class NoteKeyboardScreen(tk.Frame):
 
         #NOTAS BAJAS
         
-        label_image = Image.open("Photos/DO_high.jpg")
+        label_image = Image.open("Photos/DO_low.jpg")
         label_image = label_image.resize((65, 65), Image.LANCZOS)
         label_photo = ImageTk.PhotoImage(label_image)
         
@@ -178,7 +178,7 @@ class NoteKeyboardScreen(tk.Frame):
         button_label.image = label_photo  
         button_label.place(x=60, y=630)
 
-        label_image = Image.open("Photos/RE_high.jpg")
+        label_image = Image.open("Photos/RE_low.jpg")
         label_image = label_image.resize((65, 65), Image.LANCZOS)
         label_photo = ImageTk.PhotoImage(label_image)
         
@@ -186,7 +186,7 @@ class NoteKeyboardScreen(tk.Frame):
         button_label.image = label_photo  
         button_label.place(x=135, y=630)
 
-        label_image = Image.open("Photos/MI_high.jpg")
+        label_image = Image.open("Photos/MI_low.jpg")
         label_image = label_image.resize((65, 65), Image.LANCZOS)
         label_photo = ImageTk.PhotoImage(label_image)
         
@@ -194,7 +194,7 @@ class NoteKeyboardScreen(tk.Frame):
         button_label.image = label_photo  
         button_label.place(x=210, y=630)
 
-        label_image = Image.open("Photos/FA_high.jpg")
+        label_image = Image.open("Photos/FA_low.jpg")
         label_image = label_image.resize((65, 65), Image.LANCZOS)
         label_photo = ImageTk.PhotoImage(label_image)
         
@@ -202,7 +202,7 @@ class NoteKeyboardScreen(tk.Frame):
         button_label.image = label_photo  
         button_label.place(x=285, y=630)
 
-        label_image = Image.open("Photos/SOL_high.jpg")
+        label_image = Image.open("Photos/SOL_low.jpg")
         label_image = label_image.resize((65, 65), Image.LANCZOS)
         label_photo = ImageTk.PhotoImage(label_image)
         
@@ -210,7 +210,7 @@ class NoteKeyboardScreen(tk.Frame):
         button_label.image = label_photo  
         button_label.place(x=360, y=630)
 
-        label_image = Image.open("Photos/LA_high.jpg")
+        label_image = Image.open("Photos/LA_low.jpg")
         label_image = label_image.resize((65, 65), Image.LANCZOS)
         label_photo = ImageTk.PhotoImage(label_image)
         
@@ -218,7 +218,7 @@ class NoteKeyboardScreen(tk.Frame):
         button_label.image = label_photo  
         button_label.place(x=435, y=630)
 
-        label_image = Image.open("Photos/SI_high.jpg")
+        label_image = Image.open("Photos/SI_low.jpg")
         label_image = label_image.resize((65, 65), Image.LANCZOS)
         label_photo = ImageTk.PhotoImage(label_image)
         
