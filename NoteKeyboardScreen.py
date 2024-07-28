@@ -28,6 +28,8 @@ class NoteKeyboardScreen(tk.Frame):
         instruction_label = tk.Label(self, text="Instruments: ", font=("Helvetica", 15), fg="white", bg="black")
         instruction_label.place(x=200, y=50, anchor='center')
 
+        self.note_labels()
+
         self.instrument_combobox = ttk.Combobox(self, values=list(instruments.keys()), state="readonly", font=("Helvetica", 15, "bold"))
         self.instrument_combobox.bind("<<ComboboxSelected>>", self.change_instrument)
         self.instrument_combobox.place(x=370, y=50, anchor='center')
@@ -39,7 +41,192 @@ class NoteKeyboardScreen(tk.Frame):
 
         self.graph_frame = tk.Frame(self, bg="black")
         self.graph_frame.place(x=2, y=150, width=700, height=300)
-    
+
+        button_image = Image.open("Photos/Add.jpg")
+        button_image = button_image.resize((50, 50), Image.LANCZOS)
+        button_photo = ImageTk.PhotoImage(button_image)
+        
+        button = tk.Button(self, image=button_photo, command=self.app.show_main_screen, width=50, height=50, bd=0, highlightthickness=0)
+        button.image = button_photo  
+        button.place(x=0, y=0)
+
+    def note_labels(self):
+
+        #NOTAS ALTAS
+
+        label_image = Image.open("Photos/DO_high.jpg")
+        label_image = label_image.resize((65, 65), Image.LANCZOS)
+        label_photo = ImageTk.PhotoImage(label_image)
+        
+        button_label = tk.Label(self, image=label_photo, bd=0, highlightthickness=0)
+        button_label.image = label_photo  
+        button_label.place(x=40, y=480)
+
+        label_image = Image.open("Photos/RE_high.jpg")
+        label_image = label_image.resize((65, 65), Image.LANCZOS)
+        label_photo = ImageTk.PhotoImage(label_image)
+        
+        button_label = tk.Label(self, image=label_photo, bd=0, highlightthickness=0)
+        button_label.image = label_photo  
+        button_label.place(x=115, y=480)
+
+        label_image = Image.open("Photos/MI_high.jpg")
+        label_image = label_image.resize((65, 65), Image.LANCZOS)
+        label_photo = ImageTk.PhotoImage(label_image)
+        
+        button_label = tk.Label(self, image=label_photo, bd=0, highlightthickness=0)
+        button_label.image = label_photo  
+        button_label.place(x=190, y=480)
+
+        label_image = Image.open("Photos/FA_high.jpg")
+        label_image = label_image.resize((65, 65), Image.LANCZOS)
+        label_photo = ImageTk.PhotoImage(label_image)
+        
+        button_label = tk.Label(self, image=label_photo, bd=0, highlightthickness=0)
+        button_label.image = label_photo  
+        button_label.place(x=265, y=480)
+
+        label_image = Image.open("Photos/SOL_high.jpg")
+        label_image = label_image.resize((65, 65), Image.LANCZOS)
+        label_photo = ImageTk.PhotoImage(label_image)
+        
+        button_label = tk.Label(self, image=label_photo, bd=0, highlightthickness=0)
+        button_label.image = label_photo  
+        button_label.place(x=340, y=480)
+
+        label_image = Image.open("Photos/LA_high.jpg")
+        label_image = label_image.resize((65, 65), Image.LANCZOS)
+        label_photo = ImageTk.PhotoImage(label_image)
+        
+        button_label = tk.Label(self, image=label_photo, bd=0, highlightthickness=0)
+        button_label.image = label_photo  
+        button_label.place(x=415, y=480)
+
+        label_image = Image.open("Photos/SI_high.jpg")
+        label_image = label_image.resize((65, 65), Image.LANCZOS)
+        label_photo = ImageTk.PhotoImage(label_image)
+        
+        button_label = tk.Label(self, image=label_photo, bd=0, highlightthickness=0)
+        button_label.image = label_photo  
+        button_label.place(x=490, y=480)
+
+        #NOTAS NORMAL
+        
+        label_image = Image.open("Photos/DO_high.jpg")
+        label_image = label_image.resize((65, 65), Image.LANCZOS)
+        label_photo = ImageTk.PhotoImage(label_image)
+        
+        button_label = tk.Label(self, image=label_photo, bd=0, highlightthickness=0)
+        button_label.image = label_photo  
+        button_label.place(x=50, y=555)
+
+        label_image = Image.open("Photos/RE_high.jpg")
+        label_image = label_image.resize((65, 65), Image.LANCZOS)
+        label_photo = ImageTk.PhotoImage(label_image)
+        
+        button_label = tk.Label(self, image=label_photo, bd=0, highlightthickness=0)
+        button_label.image = label_photo  
+        button_label.place(x=125, y=555)
+
+        label_image = Image.open("Photos/MI_high.jpg")
+        label_image = label_image.resize((65, 65), Image.LANCZOS)
+        label_photo = ImageTk.PhotoImage(label_image)
+        
+        button_label = tk.Label(self, image=label_photo, bd=0, highlightthickness=0)
+        button_label.image = label_photo  
+        button_label.place(x=200, y=555)
+
+        label_image = Image.open("Photos/FA_high.jpg")
+        label_image = label_image.resize((65, 65), Image.LANCZOS)
+        label_photo = ImageTk.PhotoImage(label_image)
+        
+        button_label = tk.Label(self, image=label_photo, bd=0, highlightthickness=0)
+        button_label.image = label_photo  
+        button_label.place(x=275, y=555)
+
+        label_image = Image.open("Photos/SOL_high.jpg")
+        label_image = label_image.resize((65, 65), Image.LANCZOS)
+        label_photo = ImageTk.PhotoImage(label_image)
+        
+        button_label = tk.Label(self, image=label_photo, bd=0, highlightthickness=0)
+        button_label.image = label_photo  
+        button_label.place(x=350, y=555)
+
+        label_image = Image.open("Photos/LA_high.jpg")
+        label_image = label_image.resize((65, 65), Image.LANCZOS)
+        label_photo = ImageTk.PhotoImage(label_image)
+        
+        button_label = tk.Label(self, image=label_photo, bd=0, highlightthickness=0)
+        button_label.image = label_photo  
+        button_label.place(x=425, y=555)
+
+        label_image = Image.open("Photos/SI_high.jpg")
+        label_image = label_image.resize((65, 65), Image.LANCZOS)
+        label_photo = ImageTk.PhotoImage(label_image)
+        
+        button_label = tk.Label(self, image=label_photo, bd=0, highlightthickness=0)
+        button_label.image = label_photo  
+        button_label.place(x=500, y=555)
+
+        #NOTAS BAJAS
+        
+        label_image = Image.open("Photos/DO_high.jpg")
+        label_image = label_image.resize((65, 65), Image.LANCZOS)
+        label_photo = ImageTk.PhotoImage(label_image)
+        
+        button_label = tk.Label(self, image=label_photo, bd=0, highlightthickness=0)
+        button_label.image = label_photo  
+        button_label.place(x=60, y=630)
+
+        label_image = Image.open("Photos/RE_high.jpg")
+        label_image = label_image.resize((65, 65), Image.LANCZOS)
+        label_photo = ImageTk.PhotoImage(label_image)
+        
+        button_label = tk.Label(self, image=label_photo, bd=0, highlightthickness=0)
+        button_label.image = label_photo  
+        button_label.place(x=135, y=630)
+
+        label_image = Image.open("Photos/MI_high.jpg")
+        label_image = label_image.resize((65, 65), Image.LANCZOS)
+        label_photo = ImageTk.PhotoImage(label_image)
+        
+        button_label = tk.Label(self, image=label_photo, bd=0, highlightthickness=0)
+        button_label.image = label_photo  
+        button_label.place(x=210, y=630)
+
+        label_image = Image.open("Photos/FA_high.jpg")
+        label_image = label_image.resize((65, 65), Image.LANCZOS)
+        label_photo = ImageTk.PhotoImage(label_image)
+        
+        button_label = tk.Label(self, image=label_photo, bd=0, highlightthickness=0)
+        button_label.image = label_photo  
+        button_label.place(x=285, y=630)
+
+        label_image = Image.open("Photos/SOL_high.jpg")
+        label_image = label_image.resize((65, 65), Image.LANCZOS)
+        label_photo = ImageTk.PhotoImage(label_image)
+        
+        button_label = tk.Label(self, image=label_photo, bd=0, highlightthickness=0)
+        button_label.image = label_photo  
+        button_label.place(x=360, y=630)
+
+        label_image = Image.open("Photos/LA_high.jpg")
+        label_image = label_image.resize((65, 65), Image.LANCZOS)
+        label_photo = ImageTk.PhotoImage(label_image)
+        
+        button_label = tk.Label(self, image=label_photo, bd=0, highlightthickness=0)
+        button_label.image = label_photo  
+        button_label.place(x=435, y=630)
+
+        label_image = Image.open("Photos/SI_high.jpg")
+        label_image = label_image.resize((65, 65), Image.LANCZOS)
+        label_photo = ImageTk.PhotoImage(label_image)
+        
+        button_label = tk.Label(self, image=label_photo, bd=0, highlightthickness=0)
+        button_label.image = label_photo  
+        button_label.place(x=510, y=630)
+
+
     def set_background(self, image_path):
       
         bg_image = Image.open(image_path)

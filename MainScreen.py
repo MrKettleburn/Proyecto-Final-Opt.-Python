@@ -11,15 +11,15 @@ class MainScreen(tk.Frame):
         self.app = app
         self.pack(expand=True, fill='both')
         self.create_widgets()
-        self.play_open_sound()
+        
     
     def create_widgets(self):
         self.master.geometry("640x704")
         
-        self.set_background("Photos\FondoMusicApp.jpg")   
+        self.set_background("Photos/FondoMusicApp.jpg")   
         
-        self.create_button_with_label("Play Music", "Photos\Play.jpg", self.app.show_play_screen, 180, 80)
-        self.create_button_with_label("Play Notes", "Photos\MusicNote.jpg", self.app.show_note_keyboard_screen, 180, 400)
+        self.create_button_with_label("Play Music", "Photos/Play.jpg", self.app.show_play_screen, 180, 80)
+        self.create_button_with_label("Play Notes", "Photos/MusicNote.jpg", self.app.show_note_keyboard_screen, 180, 400)
 
     def create_button_with_label(self, text, image_path, command, x_position ,y_position):
         
@@ -41,8 +41,3 @@ class MainScreen(tk.Frame):
         
         bg_label = tk.Label(self, image=self.bg_photo)
         bg_label.place(x=0, y=0, relwidth=1, relheight=1)
-    
-    def play_open_sound(self):
-        pygame.mixer.music.load("Sonidos\Ambient-piano-logo-165357.mp3")
-        pygame.mixer.music.play()
-

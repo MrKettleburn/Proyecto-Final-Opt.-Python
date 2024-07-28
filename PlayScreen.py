@@ -27,7 +27,9 @@ class PlayScreen(tk.Frame):
         self.create_button("Photos/Previous.jpg", self.play_previous_song, 220, 600, 80,80)
         self.create_button("Photos/Next.jpg", self.play_next_song, 530, 600,80,80)
         
-        self.create_button("Photos/MusicNote.jpg", self.select_song, 170, 0, 50, 50)
+        self.create_button("Photos/Add.jpg", self.select_song, 120, 0, 50, 50)
+
+        self.create_button("Photos/Add.jpg", self.app.show_main_screen, 0, 0, 50, 50)
 
         label_image = Image.open("Photos/MusicNote.jpg")
         label_image = label_image.resize((400, 400), Image.LANCZOS)
@@ -39,6 +41,8 @@ class PlayScreen(tk.Frame):
 
         self.song_name_label = tk.Label(self, text="", font=("Helvetica", 10, "bold"), fg="white", bg="black")
         self.song_name_label.place( x=210, y=470)
+
+
 
     def create_button(self, image_path, command, x_position, y_position, x_photo_size, y_photo_size):
         
@@ -62,7 +66,7 @@ class PlayScreen(tk.Frame):
     
     def create_song_list(self):
         list_frame = tk.Frame(self, bg="")
-        list_frame.place(x=0, y=0, width=170, height=704)
+        list_frame.place(x=0, y=50, width=170, height=654)
         
         scrollbar = tk.Scrollbar(list_frame)
         scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
