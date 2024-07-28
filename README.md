@@ -20,3 +20,5 @@ Sounds: Aquí están los diccionarios de sonidos de las notas musicales dividido
 
 A continuación se muestran las pantallas de la aplicación:
 
+Pantalla principal:
+![Screenshot_20240728_031240](https://github.com/user-attachments/assets/46993b8a-b240-48a8-b701-5e6fa573e727)
